@@ -197,9 +197,9 @@ def imsave(tensor, filename):
 
 if __name__ == '__main__':
 
-    style_img = image_loader("style/nausicaa.jpg")
+    style_img = image_loader("style_images/nausicaa.jpg")
 
-    input_dir = Path('./input_blag')
+    input_dir = Path('./input_images')
 
     for imagefile in input_dir.glob('*.jpg'):
         print(imagefile.name)
@@ -212,4 +212,4 @@ if __name__ == '__main__':
 
         output = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std, content_img, style_img, input_img)
 
-        imsave(output, f'output_blag/{imagefile.name}')
+        imsave(output, f'output_images/{imagefile.name}')
